@@ -1,7 +1,7 @@
-let turn = "❌";
+let turn = "X";
 let isgameover = false;
 const changeTurn = ()=>{
-    return turn === "❌"? "⭕": "❌"
+    return turn === "X"? "0": "X"
 }
 const checkWin = ()=>{
     let boxtext = document.getElementsByClassName('boxtext');
@@ -44,7 +44,7 @@ reset.addEventListener('click', ()=>{
     Array.from(boxtexts).forEach(element => {
         element.innerText = ""
     });
-    turn = "❌"; 
+    turn = "X"; 
     isgameover = false
     document.querySelector(".line").style.width = "0vw";
     document.getElementsByClassName("info")[0].innerText  = "Turn for " + turn;
